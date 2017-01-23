@@ -13,5 +13,5 @@ angular.module('portfolioProjectApp')
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
-    ]
+    ];
   });
