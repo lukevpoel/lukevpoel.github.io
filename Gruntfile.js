@@ -26,6 +26,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  grunt.loadNpmTasks('grunt-autoprefixer');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -45,6 +47,12 @@ module.exports = function (grunt) {
           branch: 'gh-pages'
         }
       }
+    },
+
+    autoprefixer: {
+      options: {
+        browsers: ['last 2 versions', 'ie 8', 'ie 9']
+      },
     },
 
     // Watches files for changes and runs tasks based on the changed files
