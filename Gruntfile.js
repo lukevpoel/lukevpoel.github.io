@@ -1,4 +1,4 @@
-// Generated on 2017-01-23 using generator-angular 0.15.1
+// Generated on 2017-01-24 using generator-angular 0.15.1
 'use strict';
 
 // # Globbing
@@ -16,8 +16,7 @@ module.exports = function (grunt) {
   require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
-    cdnify: 'grunt-google-cdn',
-    buildcontrol: 'grunt-build-control'
+    cdnify: 'grunt-google-cdn'
   });
 
   // Configurable paths for the application
@@ -26,34 +25,11 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  grunt.loadNpmTasks('grunt-autoprefixer');
-
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     yeoman: appConfig,
-
-    buildcontrol: {
-      options: {
-        dir: 'dist',
-        commit: true,
-        push: true,
-        message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      pages: {
-        options: {
-          remote: 'git@github.com:lukevpoel/lukevpoel.github.io.git',
-          branch: 'gh-pages'
-        }
-      }
-    },
-
-    autoprefixer: {
-      options: {
-        browsers: ['last 2 versions', 'ie 8', 'ie 9']
-      },
-    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -72,9 +48,9 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
-      sass: {
-          files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-          tasks: ['sass:server', 'autoprefixer']
+      compass: {
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        tasks: ['compass:server', 'postcss:server']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -248,34 +224,36 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    },
+    }, 
 
     // Compiles Sass to CSS and generates necessary files if requested
-      sass: {
+    compass: {
+      options: {
+        sassDir: '<%= yeoman.app %>/styles',
+        cssDir: '.tmp/styles',
+        generatedImagesDir: '.tmp/images/generated',
+        imagesDir: '<%= yeoman.app %>/images',
+        javascriptsDir: '<%= yeoman.app %>/scripts',
+        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        importPath: './bower_components',
+        httpImagesPath: '/images',
+        httpGeneratedImagesPath: '/images/generated',
+        httpFontsPath: '/styles/fonts',
+        relativeAssets: false,
+        assetCacheBuster: false,
+        raw: 'Sass::Script::Number.precision = 10\n'
+      },
+      dist: {
         options: {
-          includePaths: [
-              'bower_components'
-            ]
-          },
-          dist: {
-            files: [{
-              expand: true,
-              cwd: '<%= yeoman.app %>/styles',
-              src: ['*.scss'],
-              dest: '.tmp/styles',
-              ext: '.css'
-            }]
-          },
-          server: {
-            files: [{
-              expand: true,
-              cwd: '<%= yeoman.app %>/styles',
-              src: ['*.scss'],
-              dest: '.tmp/styles',
-              ext: '.css'
-            }]
-          }
-        },
+          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+        }
+      },
+      server: {
+        options: {
+          sourcemap: true
+        }
+      }
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -460,15 +438,13 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'sass:server',
-        'copy:styles'
+        'compass:server'
       ],
       test: [
-        'copy:styles'
+        'compass'
       ],
       dist: [
-        'sass',
-        'copy:styles',
+        'compass:dist',
         'imagemin',
         'svgmin'
       ]

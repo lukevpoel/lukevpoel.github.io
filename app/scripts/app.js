@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name portfolioProjectApp
+ * @name lukevpoelgithubioApp
  * @description
- * # portfolioProjectApp
+ * # lukevpoelgithubioApp
  *
  * Main module of the application.
  */
 angular
-  .module('portfolioProjectApp', [
+  .module('lukevpoelgithubioApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -26,35 +26,10 @@ angular
         controller: 'MainCtrl',
         controllerAs: 'main'
       })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller: 'ContactCtrl',
-        controllerAs: 'contact'
-      })
-      .when('/capstone', {
-        templateUrl: 'views/capstone.html',
-        controller: 'CapstoneCtrl',
-        controllerAs: 'capstone'
-      })
-      .when('/weather', {
-        templateUrl: 'views/weather.html',
-        controller: 'WeatherCtrl',
-        controllerAs: 'weather'
-      })
-      .when('/vball', {
-        templateUrl: 'views/vball.html',
-        controller: 'VballCtrl',
-        controllerAs: 'vball'
-      })
-      .when('/analytics', {
-        templateUrl: 'views/analytics.html',
-        controller: 'AnalyticsCtrl',
-        controllerAs: 'analytics'
-      })
-      .when('/flickrapi', {
-        templateUrl: 'views/flickrapi.html',
-        controller: 'FlickrapiCtrl',
-        controllerAs: 'flickrapi'
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
       })
       .otherwise({
         redirectTo: '/'
