@@ -1,6 +1,46 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 // bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+
+/* Responsive: Phone size */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+  .col-xs-12 {
+    width: 100%
+  }
+}
+
+/* Responsive: Tablet size */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+  .col-sm-12 {
+    width: 100%
+  }
+}
+
+/* Responsive: Laptops and up */
+@media screen and (min-width: 992px) {
+  .col-md-6 {
+    width: 48%
+  }
+
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* Responsive: Hi-res */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
 
 .browsehappy {
   margin: 0.2em 0;
@@ -11,11 +51,16 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 
 body {
   padding: 0;
+  background: url("../images/code-bckgrnd.jpg");
+  background-size: cover;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
+#body-wrapper {
+    background-color:rgba(0,0,0,0.8);
+}
+
+
 .header,
-.marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -46,35 +91,9 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
@@ -83,8 +102,67 @@ body {
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+
+
+.weather-div, .vball-div, .analytics-div, .flickr-div {
+  margin: 1%;
+  height: 500px;
+  padding: 0;
+  background-size: auto 100%;
+  border: 10px;
+  border-radius: 25px;
+  .textbox {
+    border: 10px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15% auto;
+    color: white;
+    background-color:rgba(0,0,0,0.95);
+    height: 50%;
+    width: 70%;
   }
+}
+
+.capstone-div {
+  height: 500px;
+  padding: 0;
+  background-size: auto 100%;
+  border: 10px;
+  border-radius: 25px;
+  background: url("../images/capstone-cap.png");
+  width: 100%;
+  .textbox {
+    border: 10px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15% auto;
+    color: white;
+    background-color:rgba(0,0,0,0.95);
+    height: 50%;
+    width: 70%;
+  }
+}
+
+.weather-div {
+  background: url("../images/weather-app-cap.png");
+}
+
+.vball-div {
+  background: url("../images/volleyball-cap.png");
+}
+
+.analytics-div {
+  background: url("../images/analytics-cap.png");
+}
+
+.flickr-div {
+  background: url("../images/flickr-cap.png");
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+    color: yellow;
 }
