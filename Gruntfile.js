@@ -44,7 +44,7 @@ module.exports = function (grunt) {
       pages: {
         options: {
           remote: 'git@github.com:lukevpoel/lukevpoel.github.io.git',
-          branch: 'gh-pages'
+          branch: 'master'
         }
       }
     },
