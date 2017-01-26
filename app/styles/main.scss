@@ -108,7 +108,7 @@ body {
   margin: 1%;
   height: 500px;
   padding: 0;
-  background-size: auto 100%;
+  background-position: center;
   border: 10px;
   border-radius: 25px;
   .textbox {
@@ -123,13 +123,12 @@ body {
   }
 }
 
-.capstone-div {
+.capstone-div, .bio-div {
   height: 500px;
   padding: 0;
-  background-size: auto 100%;
+  margin-bottom: 10px;
   border: 10px;
   border-radius: 25px;
-  background: url("../images/capstone-cap.png");
   width: 100%;
   .textbox {
     border: 10px;
@@ -141,6 +140,14 @@ body {
     height: 50%;
     width: 70%;
   }
+}
+
+.bio-div {
+    background: url("../images/rainier-pic.jpg");
+}
+
+.capstone-div {
+    background: url("../images/capstone-cap.png");
 }
 
 .weather-div {
