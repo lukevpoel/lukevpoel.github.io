@@ -4,6 +4,47 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+
+
+/* Responsive: Phone size */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+  .col-xs-12 {
+    width: 100%
+  }
+}
+
+/* Responsive: Tablet size */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 766px;
+  }
+  .col-sm-12 {
+    width: 100%
+  }
+}
+
+/* Responsive: Laptops and up */
+@media screen and (min-width: 992px) {
+  .col-md-6 {
+    width: 48%
+  }
+
+  .container {
+    max-width: 970px;
+  }
+}
+
+/* Responsive: Hi-res */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+/* Informs user of unsupported browser */
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -11,83 +52,124 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
   padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 0;
+  background: url("../images/code-bckgrnd.jpg");
+  background-size: cover;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
+#body-wrapper {
+    background-color:rgba(0,0,0,0.8);
 }
 
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
 
 .container-narrow > hr {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
   /* Remove the padding we set earlier */
   .header,
-  .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
-
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
 
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+#navibar {
+  height: 80px;
+  text-align: center;
+  font-size: 1.5em;
+  ul {
+    list-style-type: none;
+    li {
+      padding-left: 5px;
+      padding-right: 5px;
+      display: inline;
+    }
   }
+}
+.navi-links {
+}
+
+.navi-logo, .navi-links, .navi-social {
+  margin-top: 20px;
+  img {
+    height: 40px;
+  }
+}
+
+.navi-social {
+}
+
+.weather-div, .vball-div, .analytics-div, .flickr-div, .capstone-div, .bio-div {
+  margin: 1%;
+  height: 500px;
+  padding: 0;
+  border: 10px;
+  border-radius: 25px;
+  .textbox {
+    border: 10px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15% auto;
+    color: white;
+    background-color:rgba(0,0,0,0.95);
+    height: 50%;
+    width: 70%;
+  }
+}
+
+/* .capstone-div, .bio-div {
+  height: 500px;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 10px;
+  border-radius: 25px;
+  width: 100%;
+  .textbox {
+    border: 10px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 15% auto;
+    color: white;
+    background-color:rgba(0,0,0,0.95);
+    height: 50%;
+    width: 70%;
+  }
+} */
+
+.bio-div {
+    background: url("../images/rainier-pic.jpg");
+}
+
+.capstone-div {
+    background: url("../images/capstone-cap.png");
+}
+
+.weather-div {
+  background: url("../images/weather-app-cap.png");
+}
+
+.vball-div {
+  background: url("../images/volleyball-cap.png");
+}
+
+.analytics-div {
+  background: url("../images/analytics-cap.png");
+}
+
+.flickr-div {
+  background: url("../images/flickr-cap.png");
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+    color: yellow;
 }
