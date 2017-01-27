@@ -2,6 +2,7 @@
   "name": "lukevpoelgithubio",
   "private": true,
   "devDependencies": {
+    "angular-sticky-plugin": "^0.3.0",
     "angular-ui-bootstrap": "^2.4.0",
     "autoprefixer-core": "^5.2.1",
     "grunt": "^0.4.5",
