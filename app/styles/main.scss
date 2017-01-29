@@ -19,7 +19,6 @@ body {
   background-image: url("../images/code-bckgrnd.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 
@@ -145,16 +144,19 @@ body {
 // Textbox codes for main displays
 // Main div sizing
 .weather-div, .vball-div, .analytics-div, .flickr-div, .bio-div, .profile-div {
-  height: 500px;
+  height: 600px;
   padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   .textbox {
+    h2 {
+      text-align: center;
+    }
     border: 10px;
     border-radius: 25px;
     padding: 10px;
-    margin: 15% auto;
+    margin: 5% auto;
     color: white;
     background-color:rgba(0,0,0,0.8);
     min-height: 10%;
@@ -168,10 +170,13 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   .textbox {
+    h2 {
+      text-align: center;
+    }
     border: 10px;
     border-radius: 25px;
     padding: 10px;
-    margin: 15% auto;
+    margin: 5% auto;
     color: white;
     background-color:rgba(0,0,0,0.8);
     min-height: 10%;
@@ -209,8 +214,10 @@ body {
 #capstone {
   padding: 0;
   margin: auto auto;
-  height: 450px;
   width: 100%;
+  .capstone-div {
+    height: 450px;
+  }
   img {
     height: 450px;
     margin-left: auto;
