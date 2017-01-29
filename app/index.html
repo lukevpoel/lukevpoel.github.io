@@ -28,32 +28,29 @@
     <![endif]-->
 
 
-    <div class="container-fluid">
-      <div class="header">
-          <div class="container-fluid" id="navibar">
-              <div class="col-sm-4 col-xs-8 navi navi-links">
-                <button class="col-xs-6"><a href="#capstone">Projects</a></button>
-                <button class="col-xs-6"><a href="#">About</a></button>
-
-
-                <!-- <ul class="navi-links">
-                  <li><a href="#capstone"> Projects </a>  </li>
-                  <li><a href="#"> About</a>  </li>
-                </ul> -->
-              </div>
-              <button class="col-xs-4 navi navi-logo">
-                <a href="#bio"><img src="images/lvLogo.gif"> Luke Poel</a>
-              </button>
-              <div class="col-sm-4 col-xs-12 navi navi-social">
-                  <button class="LN-logo col-xs-4"><a href="https://www.linkedin.com/in/luke-vander-poel-473b8b108"><div id="ln-img"></div></a></button>
-                  <button class="GH-logo col-xs-4"><a href="https://github.com/lukevpoel"><div id="gh-img"></div></a></button>
-                  <button class="TW-logo col-xs-4"><a href="https://twitter.com/skywalkervp"><div id="tw-img"></a></button>
-              </div>
-          </div>
+      <div class="container-fluid">
+        <div class="header">
+          <!-- Sticky navigation bar -->
+            <div class="container-fluid" id="navibar">
+                <div class="col-sm-4 col-xs-8 navi navi-links">
+                  <button class="col-xs-6"><a href="#carousel-capstone">Projects</a></button>
+                  <button class="col-xs-6"><a href="#bio">About</a></button>
+                </div>
+                <button class="col-xs-4 navi navi-logo">
+                  <a href="#bio"><img src="images/lvLogo.gif"> Luke Poel</a>
+                </button>
+                <div class="col-sm-4 col-xs-12 navi navi-social">
+                    <button class="LN-logo col-xs-4"><a href="https://www.linkedin.com/in/luke-vander-poel-473b8b108"><div id="ln-img"></div></a></button>
+                    <button class="GH-logo col-xs-4"><a href="https://github.com/lukevpoel"><div id="gh-img"></div></a></button>
+                    <button class="TW-logo col-xs-4"><a href="https://twitter.com/skywalkervp"><div id="tw-img"></a></button>
+                    </div>
+                </div>
+            </div>
         </div>
+      </div>
 
+      <!-- Container for all body content -->
       <div id="main-container">
-        <div class="home-wrap">
             <div id="bio" class="col-md-8 col-sm-12 col-xs-12 bio-div">
               <div class="textbox col-4">
                 <a href="http://www.lvpoel.me"><h2>About Luke</h2></a>
@@ -65,19 +62,49 @@
               </div>
             </div>
             <div id="profile" class="col-md-4 col-sm-12 col-xs-12 profile-div">
-
+              <!-- Filler content -->
             </div>
-            <div id="capstone" class="col-md-6 col-sm-12 col-xs-12 capstone-div">
-              <div class="textbox col-4">
-                <p><a href="lvpoel.me/we"><h3>My Capstone</h3></a>
-                </p>
+            <div id="capstone" class="container">
+              <div class="col-md-6 col-sm-12 col-xs-12 capstone-div">
+                <div class="textbox col-4">
+                  <a href="lvpoel.me/we"><h3>My Capstone - All Place holder Info</h3></a>
+                  <p>random text random text random text random text random text random text
+                    random text random text random text random text random text random text random text
+                    random text random text random text random text random text random text random text random text
+                    random text random text random text random text random text random text
+                    random text random text random text random text random text random text random text
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 capstone-div">
-              <div class="textbox col-4">
-                <p><a href="lvpoel.me/we"><h3>My Capstone</h3></a>
-                </p>
-              </div>
+              <div class="col-md-6 col-sm-12 col-xs-12 capstone-slide">
+                <div id="carousel-capstone" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-capstone" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-capstone" data-slide-to="1"></li>
+                    <li data-target="#carousel-capstone" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="images/caps/capstone-cap.png" alt="capstone-cap">
+                     </div>
+                     <div class="item">
+                       <img src="images/caps/analytics-cap.png" alt="...">
+                      </div>
+                      <div class="item">
+                        <img src="images/caps/flickr-cap.png" alt="...">
+                       </div>
+                     </div>
+                     <!-- Controls -->
+                     <a class="left carousel-control" href="#carousel-capstone" role="button" data-slide="prev">
+                       <span class="glyphicon glyphicon-chevron-left"></span>
+                     </a>
+                     <a class="right carousel-control" href="#carousel-capstone" role="button" data-slide="next">
+                       <span class="glyphicon glyphicon-chevron-right"></span>
+                     </a>
+                  </div> <!-- Carousel -->
+                </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 weather-div">
               <div class="textbox col-4">
@@ -85,29 +112,24 @@
                 </p>
               </div>
             </div>
-
             <div class="col-md-6 col-sm-12 col-xs-12 vball-div">
               <div class="textbox col-4">
                 <p><a href="lvpoel.me/we"><h3>Volleyball Page Design Demo</h3></a>
                 </p>
               </div>
             </div>
-
             <div class="col-md-6 col-sm-12 col-xs-12 analytics-div">
               <div class="textbox col-4">
                 <p><a href="lvpoel.me/we"><h3>User Science Journal</h3></a>
                 </p>
               </div>
             </div>
-
             <div class="col-md-6 col-sm-12 col-xs-12 flickr-div">
               <div class="textbox col-4">
                 <p><a href="lvpoel.me/we"><h3>Flickr API Consumption Demo</h3></a>
                 </p>
               </div>
             </div>
-
-        </div>
       </div>
 
       <div class="footer">

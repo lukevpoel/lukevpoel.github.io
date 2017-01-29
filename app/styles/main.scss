@@ -16,6 +16,9 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 body {
   padding: 0;
+  background-image: url("../images/code-bckgrnd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
 }
 
@@ -141,7 +144,7 @@ body {
 
 // Textbox codes for main displays
 // Main div sizing
-.weather-div, .vball-div, .analytics-div, .flickr-div, .capstone-div, .bio-div, .profile-div {
+.weather-div, .vball-div, .analytics-div, .flickr-div, .bio-div, .profile-div {
   height: 500px;
   padding: 0;
   background-size: cover;
@@ -159,6 +162,22 @@ body {
   }
 }
 
+.capstone-div, .capstone-slide{
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  .textbox {
+    border: 10px;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 15% auto;
+    color: white;
+    background-color:rgba(0,0,0,0.8);
+    min-height: 10%;
+    width: 70%;
+  }
+}
 
 .bio-div {
     background-image: url("../images/rainier-pic.jpg");
@@ -167,8 +186,7 @@ body {
       border-radius: 25px;
       padding: 10px 20px;
       margin: auto;
-      position: relative;
-      top: 200px;
+      margin-top: 15%;
       color: white;
       background-color:rgba(0,0,0,0.8);
       width: 70%;
@@ -176,7 +194,7 @@ body {
 
 }
 
-
+// Hide profile image at smaller sizes
 @media only screen and (max-width: 992px) {
   .profile-div {
     display: none;
@@ -188,22 +206,31 @@ body {
   background-position: top left;
 }
 
-.capstone-div {
-    background-image: url("../images/capstone-cap.png");
+#capstone {
+  padding: 0;
+  margin: auto auto;
+  height: 450px;
+  width: 100%;
+  img {
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
 }
 
 .weather-div {
-  background-image: url("../images/weather-app-cap.png");
+  background-image: url("../images/caps/weather-app-cap.png");
 }
 
 .vball-div {
-  background-image: url("../images/volleyball-cap.png");
+  background-image: url("../images/caps/volleyball-cap.png");
 }
 
 .analytics-div {
-  background-image: url("../images/analytics-cap.png");
+  background-image: url("../images/caps/analytics-cap.png");
 }
 
 .flickr-div {
-  background-image: url("../images/flickr-cap.png");
+  background-image: url("../images/caps/flickr-cap.png");
 }
