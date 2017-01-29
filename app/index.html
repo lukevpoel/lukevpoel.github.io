@@ -28,46 +28,45 @@
     <![endif]-->
 
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="header">
-          <div class="container" id="navibar">
-              <div class="col-xs-4">
-                <ul class="navi-links">
+          <div class="container-fluid" id="navibar">
+              <div class="col-sm-4 col-xs-8 navi navi-links">
+                <button class="col-xs-6"><a href="#capstone">Projects</a></button>
+                <button class="col-xs-6"><a href="#">About</a></button>
+
+
+                <!-- <ul class="navi-links">
                   <li><a href="#capstone"> Projects </a>  </li>
                   <li><a href="#"> About</a>  </li>
-                </ul>
+                </ul> -->
               </div>
-              <div class="col-xs-4 navi-logo">
-                <a href="#bio"><img src="images/lvLogo.gif"> Luke Vander Poel </a>
-              </div>
-              <div>
-                <ul class="navi-social">
-                  <li><a href="https://www.linkedin.com/in/luke-vander-poel-473b8b108"><img src="">LinkedIn</a></li>
-                  <li><a href="https://github.com/lukevpoel"><img src="">GitHub</a></li>
-                  <li><a href="https://twitter.com/skywalkervp"><img src="">Twitter</a></li>
-                </ul>
+              <button class="col-xs-4 navi navi-logo">
+                <a href="#bio"><img src="images/lvLogo.gif"> Luke Poel</a>
+              </button>
+              <div class="col-sm-4 col-xs-12 navi navi-social">
+                  <button class="LN-logo col-xs-4"><a href="https://www.linkedin.com/in/luke-vander-poel-473b8b108"><div id="ln-img"></div></a></button>
+                  <button class="GH-logo col-xs-4"><a href="https://github.com/lukevpoel"><div id="gh-img"></div></a></button>
+                  <button class="TW-logo col-xs-4"><a href="https://twitter.com/skywalkervp"><div id="tw-img"></a></button>
               </div>
           </div>
         </div>
 
       <div id="main-container">
         <div class="home-wrap">
+            <div id="bio" class="col-md-8 col-sm-12 col-xs-12 bio-div">
+              <div class="textbox col-4">
+                <a href="http://www.lvpoel.me"><h2>About Luke</h2></a>
+                <h3>A coder at heart. Bringing beautiful designs to life.</h3>
+                <p>My name is Luke Vander Poel. I am coming from a varied background where technology has always interested me.
+                  A coder at heart, I prefer the challenge of solving problems to bring a design to life.
+                  I am searching for employment in the field of web development. I am also looking for contacts to network with regarding job opportunities,
+                  and further learning opportunities. </p>
+              </div>
+            </div>
+            <div id="profile" class="col-md-4 col-sm-12 col-xs-12 profile-div">
 
-          <div class="container">
-            <div id="bio" class="col-md-6 col-sm-12 col-xs-12 bio-div">
-              <div class="textbox col-4">
-                <p><a href="lvpoel.me/we"><h3>About me</h3></a>
-                </p>
-              </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 bio-div">
-              <div class="textbox col-4">
-                <p><a href="lvpoel.me/we"><h3>About me</h3></a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="container">
             <div id="capstone" class="col-md-6 col-sm-12 col-xs-12 capstone-div">
               <div class="textbox col-4">
                 <p><a href="lvpoel.me/we"><h3>My Capstone</h3></a>
@@ -80,8 +79,6 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div class="container">
             <div class="col-md-6 col-sm-12 col-xs-12 weather-div">
               <div class="textbox col-4">
                 <p><a href="lvpoel.me/we"><h3>Weather App Demo</h3></a>
@@ -110,8 +107,6 @@
               </div>
             </div>
 
-
-          </div>
         </div>
       </div>
 

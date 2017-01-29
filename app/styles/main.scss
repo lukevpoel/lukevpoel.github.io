@@ -6,44 +6,6 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 
 
-/* Responsive: Phone size */
-@media screen and (max-width: 768px) {
-  .container {
-    max-width: 766px;
-  }
-  .col-xs-12 {
-    width: 100%
-  }
-}
-
-/* Responsive: Tablet size */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 766px;
-  }
-  .col-sm-12 {
-    width: 100%
-  }
-}
-
-/* Responsive: Laptops and up */
-@media screen and (min-width: 992px) {
-  .col-md-6 {
-    width: 48%
-  }
-
-  .container {
-    max-width: 970px;
-  }
-}
-
-/* Responsive: Hi-res */
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1170px;
-  }
-}
-
 /* Informs user of unsupported browser */
 .browsehappy {
   margin: 0.2em 0;
@@ -54,122 +16,194 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 body {
   padding: 0;
-  background: url("../images/code-bckgrnd.jpg");
-  background-size: cover;
-}
 
-#body-wrapper {
-    background-color:rgba(0,0,0,0.8);
 }
 
 
-.container-narrow > hr {
-  margin: 30px 0;
+.container-fluid {
+  padding: 0;
 }
 
-
-  /* Remove the padding we set earlier */
-  .header,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
+// All navigational elements
 #navibar {
-  height: 80px;
-  text-align: center;
-  font-size: 1.5em;
-  ul {
-    list-style-type: none;
-    li {
-      padding-left: 5px;
-      padding-right: 5px;
-      display: inline;
+  background: #ff0101;
+  font-size: 30px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+
+  button {
+    height: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  a {
+    color: black;
+    img {
+      height: 40px;
     }
   }
-}
-.navi-links {
-}
 
-.navi-logo, .navi-links, .navi-social {
-  margin-top: 20px;
-  img {
-    height: 40px;
+  button:hover {
+  a {
+    text-decoration: none;
+    color: #ff0101;
+  }
+    background-color: black;
+  }
+
+  .navi-social, .navi-logo, .navi-links {
+    height: 100%;
+    display: block;
+    margin: 0;
+    height: 80px;
+    padding-top: 20px;
+    padding-right: auto;
+    padding-left: auto;
+    text-align: center;
+    padding: 0;
   }
 }
 
-.navi-social {
+#ln-img {
+  height: 100%;
+  background: no-repeat center  url("../images/LN-black.png");
 }
 
-.weather-div, .vball-div, .analytics-div, .flickr-div, .capstone-div, .bio-div {
-  margin: 1%;
-  height: 500px;
-  padding: 0;
-  border: 10px;
-  border-radius: 25px;
-  .textbox {
-    border: 10px;
-    border-radius: 25px;
-    padding: 20px;
-    margin: 15% auto;
-    color: white;
-    background-color:rgba(0,0,0,0.95);
-    height: 50%;
-    width: 70%;
-  }
+#ln-img:hover {
+  height: 100%;
+  background: no-repeat center url("../images/LN-red.png");
 }
 
-/* .capstone-div, .bio-div {
-  height: 500px;
-  padding: 0;
-  margin-bottom: 10px;
-  border: 10px;
-  border-radius: 25px;
+#gh-img {
+  height: 100%;
+  background: no-repeat center url("../images/GH-black.png");
+}
+
+#gh-img:hover {
+  height: 100%;
+  background: no-repeat center url("../images/GH-red.png");
+}
+
+#tw-img {
+  height: 40px;
+  width: auto;
+  background: no-repeat center url("../images/TW-black.png");
+}
+
+#tw-img:hover {
+  height: 100%;
+  background: no-repeat center url("../images/TW-red.png");
+}
+
+
+
+// All elements for main container
+#main-container {
+  margin-top: 80px;
   width: 100%;
+  color: white;
+  a {
+    color: #ff0101;
+  }
+  a:hover {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #main-container {
+    margin-top: 120px;
+  }
+  #navibar{
+  height: 120px;
+    .navi {
+      height: 60px;
+    }
+  }
+  .navi-social, .navi-logo, .navi-links {
+    z-index: 120;
+    height: 100%;
+    display: block;
+    margin: 0;
+    height: 60px;
+
+    text-align: center;
+    padding: 0;
+  }
+}
+
+
+// Textbox codes for main displays
+// Main div sizing
+.weather-div, .vball-div, .analytics-div, .flickr-div, .capstone-div, .bio-div, .profile-div {
+  height: 500px;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   .textbox {
     border: 10px;
     border-radius: 25px;
-    padding: 20px;
+    padding: 10px;
     margin: 15% auto;
     color: white;
-    background-color:rgba(0,0,0,0.95);
-    height: 50%;
+    background-color:rgba(0,0,0,0.8);
+    min-height: 10%;
     width: 70%;
   }
-} */
+}
+
 
 .bio-div {
-    background: url("../images/rainier-pic.jpg");
+    background-image: url("../images/rainier-pic.jpg");
+    .textbox {
+      border: 0px;
+      border-radius: 25px;
+      padding: 10px 20px;
+      margin: auto;
+      position: relative;
+      top: 200px;
+      color: white;
+      background-color:rgba(0,0,0,0.8);
+      width: 70%;
+    }
+
+}
+
+
+@media only screen and (max-width: 992px) {
+  .profile-div {
+    display: none;
+  }
+}
+
+.profile-div {
+  background-image: url("../images/Profile-img.jpg");
+  background-position: top left;
 }
 
 .capstone-div {
-    background: url("../images/capstone-cap.png");
+    background-image: url("../images/capstone-cap.png");
 }
 
 .weather-div {
-  background: url("../images/weather-app-cap.png");
+  background-image: url("../images/weather-app-cap.png");
 }
 
 .vball-div {
-  background: url("../images/volleyball-cap.png");
+  background-image: url("../images/volleyball-cap.png");
 }
 
 .analytics-div {
-  background: url("../images/analytics-cap.png");
+  background-image: url("../images/analytics-cap.png");
 }
 
 .flickr-div {
-  background: url("../images/flickr-cap.png");
-}
-
-a {
-  color: white;
-}
-
-a:hover {
-    color: yellow;
+  background-image: url("../images/flickr-cap.png");
 }
