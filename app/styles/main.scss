@@ -15,16 +15,10 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 }
 
 body {
-  padding: 0;
-  background-image: url("../images/code-bckgrnd.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("../images/checkered-red-black.png");
 }
 
 
-.container-fluid {
-  padding: 0;
-}
 
 // All navigational elements
 #navibar {
@@ -106,8 +100,8 @@ body {
 
 // All elements for main container
 #main-container {
-  margin-top: 80px;
-  width: 100%;
+  margin-top: 90px;
+  // width: 100%;
   color: white;
   a {
     color: #ff0101;
@@ -120,7 +114,7 @@ body {
 
 @media only screen and (max-width: 768px) {
   #main-container {
-    margin-top: 120px;
+    margin-top: 130px;
   }
   #navibar{
   height: 120px;
@@ -144,8 +138,7 @@ body {
 // Textbox codes for main displays
 // Main div sizing
 .weather-div, .vball-div, .analytics-div, .flickr-div, .bio-div, .profile-div {
-  height: 600px;
-  padding: 0;
+  min-height: 600px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -165,7 +158,6 @@ body {
 }
 
 .capstone-div, .capstone-slide{
-  padding: 0;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -212,17 +204,13 @@ body {
 }
 
 #capstone {
-  padding: 0;
   margin: auto auto;
   width: 100%;
-  .capstone-div {
-    height: 450px;
-  }
   img {
-    height: 450px;
+    width: 100%;
+    max-height: 450px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
   }
 }
 

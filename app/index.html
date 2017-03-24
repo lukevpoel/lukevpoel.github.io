@@ -28,10 +28,9 @@
     <![endif]-->
 
 
-      <div class="container-fluid">
         <div class="header">
           <!-- Sticky navigation bar -->
-            <div class="container-fluid" id="navibar">
+            <div id="navibar">
                 <div class="col-sm-4 col-xs-8 navi navi-links">
                   <button class="col-xs-6"><a href="#carousel-capstone">Projects</a></button>
                   <button class="col-xs-6"><a href="#bio">About</a></button>
@@ -47,26 +46,57 @@
                 </div>
             </div>
         </div>
-      </div>
 
       <!-- Container for all body content -->
       <div id="main-container">
-            <div id="bio" class="col-md-8 col-sm-12 col-xs-12 bio-div">
-              <div class="textbox col-4">
-                <h2><a href="http://www.lvpoel.me">About Luke</a></h2>
-                <h3>A coder at heart. Bringing beautiful designs to life.</h3>
-                <p>My name is Luke Vander Poel. I am coming from a varied background where technology has always interested me.
-                  A coder at heart, I prefer the challenge of solving problems to bring a design to life.
-                  I am searching for employment in the field of web development. I am also looking for contacts to network with regarding job opportunities,
-                  and further learning opportunities. </p>
+        <div class="container">
+          <div class="row">
+              <div id="bio" class="col-md-8 col-sm-12 col-xs-12 bio-div">
+                <div class="textbox col-4">
+                  <h2><a href="http://www.lvpoel.me">About Luke</a></h2>
+                  <h3>A coder at heart. Bringing beautiful designs to life.</h3>
+                  <p>My name is Luke Vander Poel. I am coming from a varied background where technology has always interested me.
+                    A coder at heart, I prefer the challenge of solving problems to bring a design to life.
+                    I am searching for employment in the field of web development. I am also looking for contacts to network with regarding job opportunities,
+                    and further learning opportunities. </p>
+                </div>
+              </div>
+              <div id="profile" class="col-md-4 col-sm-12 col-xs-12 profile-div">
+                <!-- Filler content -->
               </div>
             </div>
-            <div id="profile" class="col-md-4 col-sm-12 col-xs-12 profile-div">
-              <!-- Filler content -->
-            </div>
-            <div id="capstone" class="container">
-              <div class="col-md-6 col-sm-12 col-xs-12 capstone-div">
-                <div class="textbox col-4">
+            <div id="capstone">
+              <div class="capstone-div">
+                <div class="row capstone-slide">
+                  <div id="carousel-capstone" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#carousel-capstone" data-slide-to="0" class="active"></li>
+                      <li data-target="#carousel-capstone" data-slide-to="1"></li>
+                      <li data-target="#carousel-capstone" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img src="images/caps/capstone-cap.png" alt="capstone-cap">
+                       </div>
+                       <div class="item">
+                         <img src="images/caps/analytics-cap.png" alt="...">
+                        </div>
+                        <div class="item">
+                          <img src="images/caps/flickr-cap.png" alt="...">
+                         </div>
+                       </div>
+                       <!-- Controls -->
+                       <a class="left carousel-control" href="#carousel-capstone" role="button" data-slide="prev">
+                         <span class="glyphicon glyphicon-chevron-left"></span>
+                       </a>
+                       <a class="right carousel-control" href="#carousel-capstone" role="button" data-slide="next">
+                         <span class="glyphicon glyphicon-chevron-right"></span>
+                       </a>
+                    </div> <!-- Carousel -->
+                  </div>
+                <div class="row textbox col-4">
                   <h2><a href="http://krememusic.lvpoel.me">Music Events - </a><a href="https://github.com/lukevpoel/Capstone2017">The Code</a></h2>
                   <h3>The Goal</h3>
                   <p> This site is designed to give users the ability to search for music events,
@@ -84,37 +114,8 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-6 col-sm-12 col-xs-12 capstone-slide">
-                <div id="carousel-capstone" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#carousel-capstone" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-capstone" data-slide-to="1"></li>
-                    <li data-target="#carousel-capstone" data-slide-to="2"></li>
-                  </ol>
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner">
-                    <div class="item active">
-                      <img src="images/caps/capstone-cap.png" alt="capstone-cap">
-                     </div>
-                     <div class="item">
-                       <img src="images/caps/analytics-cap.png" alt="...">
-                      </div>
-                      <div class="item">
-                        <img src="images/caps/flickr-cap.png" alt="...">
-                       </div>
-                     </div>
-                     <!-- Controls -->
-                     <a class="left carousel-control" href="#carousel-capstone" role="button" data-slide="prev">
-                       <span class="glyphicon glyphicon-chevron-left"></span>
-                     </a>
-                     <a class="right carousel-control" href="#carousel-capstone" role="button" data-slide="next">
-                       <span class="glyphicon glyphicon-chevron-right"></span>
-                     </a>
-                  </div> <!-- Carousel -->
-                </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 weather-div">
+            <div class="row weather-div">
               <div class="textbox col-4">
                 <h2><a href="http://weather.lvpoel.me/#/">Weather App - </a><a href="https://github.com/lukevpoel/angular-app">The Code</a></h2>
                 <h3>The purpose</h3>
@@ -129,7 +130,7 @@
                   previous searches.</p>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 vball-div">
+            <div class="col-xs-12 vball-div">
               <div class="textbox col-4">
                 <h2><a href="http://www.lvpoel.me/volleyball-final/">Volleyball Design(switch?) - </a><a href="https://github.com/lukevpoel/volleyball-final">The Code</a></h2>
                 <h3>The purpose</h3>
@@ -140,7 +141,7 @@
                 <p>Need to fill.</p>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 analytics-div">
+            <div class="col-xs-12 analytics-div">
               <div class="textbox col-4">
                 <h2><a href="http://responserequest.com/vanderp3/">User Science Journal</a></h2>
                 <h3>The purpose</h3>
@@ -154,7 +155,7 @@
                 I also learned how to navigate around Analytics, and then be able to analyze the data.</p>
               </div>
             </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 flickr-div">
+            <div class="col-xs-12 flickr-div">
               <div class="textbox col-4">
                 <h2><a href="http://www.lvpoel.me/wats1020-flickr-search/">Flickr App - </a><a href="https://github.com/lukevpoel/wats1020-flickr-search">The Code</a></h2>
                 <h3>The purpose</h3>
@@ -166,6 +167,7 @@
                 <p>I learned how to make calls using an API and consume the data that was returned.</p>
               </div>
             </div>
+          </div>
       </div>
 
       <div class="footer">
